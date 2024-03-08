@@ -1,0 +1,63 @@
+<!-- /* Create a faculty calculator using JavaScript
+
+ This faulty calculator does following:
+ 
+It takes two numbers as input from the user
+It performs wrong operations as follows:
+
+ + --- -
+ 
+-- +
+--- /
+/ - **
+
+ It performs wrong operation 10% of the times
+
+
+*/ 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Hello</p>
+  <script>
+    let random = Math.random();
+    let a = prompt("Enter the number a: ")
+   let c= prompt("Enter the operator: ")
+    let b= prompt("Enter the number b: ")
+    
+    let obj = {
+      "+":"-",
+      "-":"+",
+      "*":"/",
+      "/":"*"
+    }
+
+   
+    //when code runs well as correct calculator
+    if(random > 0.1){
+      
+      alert(`The result is : ${eval(`${a} ${c} ${b}`)}`);
+    }
+
+//when code acts as a faulty calculator
+    else{
+      c = obj[c];
+      alert(`The result is : ${eval(`${a} ${c} ${b}`)}`) ;
+    }
+    
+    console.log(`${a} ${c} ${b}`);
+    // console.log(`${result}`);
+    
+    </script> 
+</body>
+
+
+</html>
